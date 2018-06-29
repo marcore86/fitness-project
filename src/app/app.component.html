@@ -1,32 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwmatJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<mat-sidenav-container class="example-container">
-  <mat-sidenav opened mode="side">Start content</mat-sidenav>
-  <mat-sidenav-content>Main</mat-sidenav-content>
-</mat-sidenav-container>
-
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" class="app-sidenav">
-    <mat-nav-list>
-      <a mat-list-item href="page1.html">Page 1</a>
-      <a mat-list-item href="page2.html">Page 2</a>
-      <a mat-list-item href="page3.html">Page 3</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-toolbar color="primary">
+<!-- header -->
+<div fxLayout.xs="column" fxLayout="row" class='menu' fxLayoutAlign="start center">
+  <mat-toolbar color="primary" fxFlex='20'>
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon class="mat-24">menu</mat-icon>
     </button>
   </mat-toolbar>
-  <div class="app-content">
-    Example Content area
-    <br>
-    <br>
+  <div fxLayout="row" fxFlex="80" xShow [fxHide.xs]="true" fxHide="false">
+    <div fxFlex='33'>Hello</div>
+    <div fxFlex='33'>salve</div>
   </div>
-</mat-sidenav-container>
+</div>
+<!-- horizontal menu -->
+<div fxLayout="column" fxShow [fxHide.xs]="false" fxHide="true">
+  <div fxFlex='33'>sa</div>
+  <div fxFlex='33'>das</div>
+</div>
