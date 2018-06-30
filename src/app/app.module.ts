@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule
   ],
   providers: [],
+  exports: [RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
