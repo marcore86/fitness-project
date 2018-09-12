@@ -1,12 +1,23 @@
 <div class="header-container">
     <header>
-        <h1>My Angular + TypeScript App</h1>
+        <a fxFlex="10">Logo</a>
+        <nav
+            fxFlex="80"
+            fxLayoutAlign="space-between center"
+        >
+            <button mat-raised-button>Button 1</button>
+            <button mat-raised-button>Button 2</button>
+            <button mat-raised-button>Button 3</button>
+            <button mat-raised-button>Button 4</button>
+        </nav>
+        <div fxFlex="10" fxLayoutAlign="end center">Login</div>
     </header>
 </div>
 
-<div class="main-container">
-    <router-outlet></router-outlet>
-</div>
+<div id="page container">
+    <div class="main-container">
+        <router-outlet></router-outlet>
+    </div>
 
-<div class="footer-container">
+    <div class="footer-container"></div>
 </div>
