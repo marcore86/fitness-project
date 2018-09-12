@@ -6,10 +6,13 @@ import { MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule } from
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { RouterModule, Routes } from '@angular/router';
     MatIconModule,
     MatToolbarModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   exports: [RouterModule],

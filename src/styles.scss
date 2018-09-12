@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+:host {
+  flex: 1 1 100%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+  
