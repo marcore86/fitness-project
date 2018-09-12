@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   navigationSideMenu = ['menu', 'home'];
   title = 'app';
+  toHaveALook ='https://www.awwwards.com/';
 }
