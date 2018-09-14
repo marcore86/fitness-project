@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MaterialModule } from './material.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { MaterialModule } from './material.module';
     BrowserAnimationsModule,
     CommonModule,
     FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [],
