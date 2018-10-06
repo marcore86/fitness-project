@@ -1,87 +1,44 @@
 <div class="header-container">
-    <header>
+    <header fxLayoutAlign="space-around center" fxFlex>
         <a fxFlex="10">Logo</a>
-        <div
-            *ngIf="!searchView"
-            fxFlex="80"
-            fxLayoutAlign="center center"
-        >
-            <nav
-                fxFlex
-                fxLayoutAlign="space-around center"
-            >
-                <button
-                    mat-raised-button
-                    color="primary"
-                >
+        <div *ngIf="!searchView" fxFlex="80" fxLayoutAlign="space-around center">
+            <nav fxFlex fxLayoutAlign="space-around center">
+                <button mat-raised-button color="primary">
                     Button 1
                 </button>
-                <button
-                    mat-raised-button
-                    color="primary"
-                >
+                <button mat-raised-button color="primary">
                     Button 2
                 </button>
-                <button
-                    mat-raised-button
-                    color="primary"
-                >
+                <button mat-raised-button color="primary">
                     Button 3
                 </button>
-                <button
-                    mat-raised-button
-                    color="primary"
-                >
+                <button mat-raised-button color="primary">
                     Button 4
                 </button>
             </nav>
         </div>
-        <div
-            *ngIf="searchView"
-            fxFlex="80"
-            fxLayoutAlign="center center"
-        >
-            <mat-form-field>
-                <input
-                    type="text"
-                    matInput
-                    placeholder="States Group"
-                    [formControl]="searchFormControl"
-                    [matAutocomplete]="autoGroup"
-                >
+        <div *ngIf="searchView" fxFlex="80" fxLayoutAlign="center center">
+            <mat-form-field fxFlex='column'>
+                <input type="text" matInput placeholder="States Group" [formControl]="searchFormControl" [matAutocomplete]="autoGroup">
                 <mat-autocomplete #autoGroup="matAutocomplete">
-                    <mat-optgroup
-                        *ngFor="let group of stateGroupOptions | async"
-                        [label]="group.letter"
-                    >
-                        <mat-option
-                            *ngFor="let name of group.names"
-                            [value]="name"
-                        >
+                    <mat-optgroup *ngFor="let group of stateGroupOptions" [label]="group.letter">
+                        <mat-option *ngFor="let name of group.names" [value]="name">
                             {{name}}
                         </mat-option>
                     </mat-optgroup>
                 </mat-autocomplete>
             </mat-form-field>
         </div>
-        <i
-            fxFlex="3"
-            class="material-icons pointer"
-            fxLayoutAlign="end center"
-            (click)="toggleSearchView()"
-        >
+        <i fxFlex="3" class="material-icons pointer" fxLayoutAlign="end center" (click)="toggleSearchView()">
             search
         </i>
-        <div
-            fxFlex="7"
-            fxLayoutAlign="center center"
-        >
+        <div fxFlex="7" fxLayoutAlign="center center">
             Login
         </div>
     </header>
 </div>
 
-<div class="page-container">
+<div class="page-container">s
     <div class="main-container">
         <router-outlet></router-outlet>
     </div>

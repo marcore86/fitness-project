@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 export interface StateGroup {
   letter: string;
@@ -87,22 +88,23 @@ export class AppComponent implements OnInit {
     names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
   }];
 
-  stateGroupOptions: Observable<StateGroup[]>;
+  stateGroupOptions: StateGroup[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
+    this.stateGroupOptions = this.stateGroups;
     const values = this.searchFormControl.valueChanges as Observable<string>;
-    this.stateGroupOptions = values
-      .pipe(
-        map(value => this._filterGroup(value))
-      );
+    /*this.stateGroupOptions = values
+        .pipe(
+          map(value => this._filterGroup(value))
+        );*/
   }
 
   private _filterGroup(value: string): StateGroup[] {
     if (value) {
       return this.stateGroups
-        .map(group => ({letter: group.letter, names: _filter(group.names, value)}))
+        .map(group => ({ letter: group.letter, names: _filter(group.names, value) }))
         .filter(group => group.names.length > 0);
     }
     return this.stateGroups;

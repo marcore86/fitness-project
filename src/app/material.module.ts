@@ -1,6 +1,9 @@
 import { NgModule, Type } from '@angular/core';
 import { CommonModule as AngularCommonModule } from '@angular/common';
-import { MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule, MatButtonModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import {
+  MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule, MatButtonModule, MatAutocompleteModule,
+  MatFormFieldModule, MatInputModule
+} from '@angular/material';
 
 const modules: Array<Type<any>> = [
   AngularCommonModule,
